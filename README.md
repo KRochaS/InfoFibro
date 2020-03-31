@@ -1,27 +1,12 @@
 # InfoFibro
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.0.3.
 
-## Development server
-
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+### DESCRIÇÃO GERAL
+O site Info.Fibro gerencia um cadastro de portadores da doença, e também familiares e amigos que gostariam de apoiar para que seja possível o reconhecimento e chegue em mais estados do Brasil
+Conta também com algumas informações sobre a doença, tratamentos, atividades físicas que auxiliam na diminuição das dores, etc.
+#### Justificativas
+Sendo a síndrome de Fibromialgia pouco conhecida, não há atendimento preferencial aos portadores, há falta de auxílio doença, e há necessidade da visibilidade da doença para que a carteirinha para portadores torne comum em outras cidades do Brasil.
+#### Objetivos
+Levar até os portadores de Fibromialgia um espaço pra que possam ter visibilidade, onde serão encontradas informações uteis sobre a doença, e um espaço para quem quiser apoiar o incentivo a carteirinha para portadores.
+#### Benefícios
+A visibilidade para uma doença pouco conhecida, a oportunidade de chegar em mais pessoas o conhecimento sobre a doença e também a chance da carteirinha de portador tomar proporções maiores, atingindo outras cidades e beneficiando muitos portadores.
