@@ -1,5 +1,6 @@
 # InfoFibro
 
+![Info.Fibro](https://i.ibb.co/xFbgPKr/Info-Fibro.png)
 
 ### DESCRIÇÃO GERAL
 O site Info.Fibro gerencia um cadastro de portadores da doença, e também familiares e amigos que gostariam de apoiar para que seja possível o reconhecimento e chegue em mais estados do Brasil
