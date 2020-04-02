@@ -5,6 +5,7 @@ import { FramePageComponent } from './frame-page/frame-page.component';
 import { LoginComponent } from './account/login/login.component';
 import { SignupComponent } from './account/signup/signup.component';
 import { ResetPasswordComponent } from './account/reset-password/reset-password.component';
+import { ContaComponent } from './account/conta/conta.component';
 
 
 const routes: Routes = [
@@ -12,10 +13,11 @@ const routes: Routes = [
     path: '',
     component: FramePageComponent,
     children: [
-       {path: '', component: HomeComponent},
-       {path: 'login', component: LoginComponent},
-  {path:  'signup', component: SignupComponent},
-  {path: 'reset-password', component: ResetPasswordComponent}
+      { path: '', component: HomeComponent },
+      { path: 'login', component: LoginComponent },
+      { path: 'signup', component: SignupComponent },
+      { path: 'reset-password', component: ResetPasswordComponent },
+      { path: 'conta', component: ContaComponent}
     ]
   },
 
