@@ -1,0 +1,19 @@
+{
+  "hosting": [
+    {
+      "target": "infoFibro",
+      "public": "dist/infoFibro",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ],
+      "rewrites": [
+        {
+          "source": "**",
+          "destination": "/index.html"
+        }
+      ]
+    }
+  ]
+}

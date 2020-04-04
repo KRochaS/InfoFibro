@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "infofibro-45cb8": {
+      "hosting": {
+        "infoFibro": [
+          "infofibro-45cb8"
+        ]
+      }
+    }
+  }
+}

@@ -10,13 +10,16 @@ import { ResetPasswordComponent } from './account/reset-password/reset-password.
 import { HomeComponent } from './home/home.component';
 import { FramePageComponent } from './frame-page/frame-page.component';
 import { ContaComponent } from './account/conta/conta.component';
-import { AngularFireModule } from 'angularfire2';
-import {AngularFireDatabaseModule} from 'angularfire2/database';
-import { AngularFireAuthModule } from 'angularfire2/auth'
+import { AngularFireModule } from '@angular/fire';
+// import {AngularFireDatabaseModule} from 'angularfire2/database';
+import { AngularFirestore } from '@angular/fire/firestore';
+import { AngularFireAuthModule } from '@angular/fire/auth'
+
 import { NgxLoadingModule } from 'ngx-loading';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {ToasterModule} from 'angular2-toaster';
 import {NoopAnimationsModule} from '@angular/platform-browser/animations';
+import { AngularFireDatabaseModule } from '@angular/fire/database';
 
 export const environment = {
   firebase: {
@@ -50,12 +53,12 @@ export const environment = {
     AppRoutingModule,
     AngularFireModule.initializeApp(environment.firebase),
     NgxLoadingModule.forRoot({}),
-    AngularFireDatabaseModule,
     AngularFireAuthModule,
+    AngularFireDatabaseModule,
     ToasterModule.forRoot(),
     NoopAnimationsModule
   ],
-  providers: [],
+  providers: [AngularFirestore],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

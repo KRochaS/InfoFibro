@@ -7,7 +7,7 @@
 				</a>
 
 				<ul class="uk-navbar-nav">
-					<li><a href="#"> Início</a></li>
+					<li><a [routerLink]="['/']" routerLinkActive="uk-text-bold"> Início</a></li>
 					<li><a href="#">Apoie </a> </li>
 					<li> <a href="#"> Informações</a></li>
 					<li> <a href="#"> Relatos</a></li>
@@ -15,20 +15,23 @@
 				</ul>
 			</div>
 			<div class="uk-navbar-right">
-				<ul class="uk-navbar-nav">
-					<li>
-						<a href="/login">
-							<span class="uk-icon uk-margin-small-right" uk-icon="icon: user">Login/Cadastre-se</span>
-
-						</a>
-					</li>
-
-				</ul>
+				<ul class="uk-subnav uk-subnav-pill" uk-margin>
+                    <li>
+                        <a> Conta <span uk-icon="icon:  triangle-down"></span></a>
+                        <div uk-dropdown="mode: click;" class="uk-padding-small">
+                            <ul class="uk-nav uk-dropdown-nav ">
+                                <li><a (click)="verificaLogin()" style="color:black !important;"> {{user.name}}</a></li>
+                                <li><a (click)="logout()" style="color:black !important;">Logout</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
 			</div>
 		</nav>
 	</div>
 </div>
 
+<ngx-loading [show]="loading"></ngx-loading>
 
 
 
