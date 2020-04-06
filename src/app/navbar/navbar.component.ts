@@ -6,6 +6,7 @@ import { AngularFirestore } from '@angular/fire/firestore';
 import { AngularFireDatabase } from '@angular/fire/database';
 import { map } from 'rxjs/operators';
 import { Router } from '@angular/router';
+import { ToasterService } from 'angular2-toaster';
 
 @Component({
     selector: 'app-navbar',
@@ -23,18 +24,30 @@ export class NavbarComponent implements OnInit {
 
     constructor(public afAuth: AngularFireAuth,
         private db: AngularFireDatabase,
-        private router: Router) {
+        private router: Router,
+        private toasterService: ToasterService) {
         this.user = afAuth.authState;
     }
     ngOnInit() {
 
+       
         this.user.name = 'Login'
 
         this.user.subscribe((users) => {
-            this.usersAutenticado = users;
-            this.getList();
+            if (users === null) {
+                this.user.name = 'Login'
+                this.usersAutenticado = users;
+            } else {
+
+                this.getList();
+                this.usersAutenticado = users;
+            }
         })
 
+        this.afAuth.auth.onAuthStateChanged((value) => {
+            console.log(value);
+            this.usersAutenticado = value;
+        })
        
         
 
@@ -59,17 +72,23 @@ export class NavbarComponent implements OnInit {
             })
             )
 
-            if(this.usersAutenticado)  {
+            this.afAuth.auth.onAuthStateChanged((value) => {
+                this.usersAutenticado = value;
+            })
+
+            if(this.usersAutenticado != null || this.usersAutenticado != undefined)  {
                 this.dataTeste.subscribe((value) => {
                     this.loading = false;
                     this.afAuth.user.subscribe((users) => {
-                        value.forEach(element => {
-        
-                            if (element.email === users.email) {
-                                this.user.name = element.nome;
-        
-                            }
-                        });
+                        if(users) {
+                            value.forEach(element => {
+                                if (element.email === users.email) {
+                                    this.user.name = element.nome;
+            
+                                }
+                            });
+
+                        }
                     })
                 })
             } else {
@@ -80,10 +99,13 @@ export class NavbarComponent implements OnInit {
 
     logout() {
         console.log('logout');
-
         this.afAuth.auth.signOut().then(() => {
             this.user.name = 'Login'
-        })
+            this.toasterService.pop('success', 'Logout efetuado!');
+            this.router.navigateByUrl('/');
+        }).catch((err)=> {
+            this.toasterService.pop('error', 'Erro ao fazer logout. Tente novamente');
+        });
     }
 }
 

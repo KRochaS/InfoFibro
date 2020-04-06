@@ -7,34 +7,35 @@
 
     <div class="uk-card uk-card-primary uk-card-body uk-box-shadow-small">
       <div class="uk-column-1-3 uk-flex uk-flex-around" ui-grid>
-        <h3 class="uk-card-title"> Alterar Conta</h3>
+        <h3 class="uk-card-title"> Informações da conta </h3>
 
         <span class="uk-icon" uk-icon="icon: icon-color-dark; ratio: 0.1"></span>
       </div>
 
-      <!-- <form [formGroup]="form"> -->
+      <form [formGroup]="form" class="uk-margin">
         <div class="uk-margin">
-          <input type="text" class="uk-input uk-form-large" placeholder="Nome">
+          <input readonly formControlName="nome" type="text" class="uk-input uk-form-large" placeholder="Nome">
 
         </div>
         <div class="uk-margin">
-          <input  type="email" class="uk-input uk-form-large" placeholder="E-mail">
+          <input readonly formControlName="email" type="email" class="uk-input uk-form-large" placeholder="E-mail">
 
         </div>
-        <div class="uk-margin">
-          <input  type="password" class="uk-input uk-form-large" placeholder="Senha">
+        <div class="submit-line uk-margin">
+            
+            <input  formControlName="senha" #password type="password" class="uk-input uk-form-large" placeholder="Senha">
+          
+            <button class="" (click)="changeType(password)"  class="submit-lente uk-margin-right" type="submit">
+              <i [ngClass]="toggle ? 'fas fa-eye' : 'fas fa-eye-slash'"></i>
+            </button>
         </div>
+      </form>
 
-      <!-- </form> -->
-
-      <div class="uk-margin uk-text-right">
-        <a href="/login" class="uk-button uk-button-default"> Salvar </a>
-      </div>
     </div>
 
 
     <p class="uk-text-center">
-      <a href="/login" class="uk-button uk-button-link"> Deletar Conta</a>
+      <a  (click)="deletarConta()" class="uk-button uk-button-link"> Deletar Conta</a>
     </p>
   </div>
 </div>

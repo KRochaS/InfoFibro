@@ -12,7 +12,7 @@ export class AppComponent  implements OnInit{
   public configToaster: ToasterConfig = new ToasterConfig({
     positionClass: 'toast-top-right',
     animation: 'fade',
-    timeout: 1000,
+    timeout: 3000,
     showCloseButton: true
   });
   constructor( private afAuth: AngularFireAuth,
