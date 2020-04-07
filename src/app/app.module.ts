@@ -20,6 +20,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {ToasterModule} from 'angular2-toaster';
 import {NoopAnimationsModule} from '@angular/platform-browser/animations';
 import { AngularFireDatabaseModule } from '@angular/fire/database';
+import { ApoieComponent } from './apoie/apoie.component';
 
 export const environment = {
   firebase: {
@@ -44,7 +45,8 @@ export const environment = {
     ResetPasswordComponent,
     HomeComponent,
     FramePageComponent,
-    ContaComponent
+    ContaComponent,
+    ApoieComponent
   ],
   imports: [
     BrowserModule,

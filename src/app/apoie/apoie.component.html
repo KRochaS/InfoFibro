@@ -1,0 +1,55 @@
+<div class="uk-flex-center" uk-grid>
+    <div class="uk-width-1-2@m">
+      <p class="uk-text-center uk-margin-large-top uk-margin-small-bottom">
+  
+      </p>
+  
+  
+      
+       
+      <div class="uk-flex-between" uk-grid>
+          <h3 class="sub-title"> Apoie </h3>
+      
+              <span class="uk-icon" uk-icon="icon: icon-color-dark; ratio: 0.1"></span>
+
+      </div>
+     
+  
+        <div class="section uk-margin-small-top">
+            <p> Em Setembro de 2019 foi noticiado que o municipio de Arapongas, concedeu a primeira carteirinha para
+                portadora de fibromialgia, outros municipios já estão com a solicitação em andamento, porém ainda há pouca
+                visibilidade para que este benefício chegue a mais municipios e cidades do Brasil. A carteirinha é um 
+                meio do portador se identificar para ter atendimento prioritário em estabelecimentos e filas. Apoie para 
+                para que a carteirinha seja um beneficio disponivel em todo Brasil.
+                
+            
+            </p>
+        </div>
+
+        <div class="uk-progress">
+                    <div class="uk-progress-bar" [ngStyle]="{'width': width}"> <p class="hidden-text">' </p> </div>
+        </div>
+    
+  
+  
+      <p *ngIf="apoiadoresTotal && apoiadoresTotal.length === 1" class="uk-text-center" style="color: #000">
+        <!-- <a href="/login" class="uk-button uk-button-link"> APOIE</a> --> 
+       {{apoiadoresTotal ? apoiadoresTotal.length + ' apoiador' : 'Não há apoios no momento'}}
+      </p>
+
+      <p *ngIf="apoiadoresTotal && apoiadoresTotal.length > 1" class="uk-text-center" style="color: #000">
+        <!-- <a href="/login" class="uk-button uk-button-link"> APOIE</a> --> 
+       {{apoiadoresTotal ? apoiadoresTotal.length + ' apoiadores' : 'Não há apoios no momento'}}
+      </p>
+
+
+      <div class="uk-margin-large uk-text-center">
+        <button (click)="apoie()" class="uk-button uk-button-primary"> {{apoiadoresTotal && apoiadoresTotal.length > 0 ? ' Apoie também' : 'Seja o primeiro a apoiar' }}</button>
+      </div>
+    </div>
+  </div>
+  
+  <ngx-loading [show]="loading"></ngx-loading>
+  
+  
+  

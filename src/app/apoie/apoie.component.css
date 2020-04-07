@@ -1,0 +1,23 @@
+.uk-icon {
+    color: #000 !important;
+}
+
+h3.sub-title {
+    color: #840240;
+  }
+  
+.section p {
+    color: #000;
+    line-height: 24px;
+}
+
+.uk-progress {
+    background-color: #FFFFFF;
+}
+
+.uk-progress-bar {
+    background-color:#7429A6
+}
+.hidden-text {
+    color: transparent;
+}
