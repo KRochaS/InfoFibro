@@ -7,6 +7,7 @@ import { SignupComponent } from './account/signup/signup.component';
 import { ResetPasswordComponent } from './account/reset-password/reset-password.component';
 import { ContaComponent } from './account/conta/conta.component';
 import { ApoieComponent } from './apoie/apoie.component';
+import { InformacoesComponent } from './informacoes/informacoes.component';
 
 
 const routes: Routes = [
@@ -19,7 +20,8 @@ const routes: Routes = [
       { path: 'signup', component: SignupComponent },
       { path: 'reset-password', component: ResetPasswordComponent },
       { path: 'conta', component: ContaComponent},
-      { path: 'apoie', component: ApoieComponent}
+      { path: 'apoie', component: ApoieComponent},
+      {path: 'informacoes', component: InformacoesComponent}
     ]
   },
 

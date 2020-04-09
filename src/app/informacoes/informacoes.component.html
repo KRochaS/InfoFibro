@@ -1,0 +1,27 @@
+<section class="uk-section uk-padding-remove-top">
+    <div class="uk-container uk-padding-remove-top">
+      <h3 class="sub-title"> Informações </h3>
+  
+      <div class="uk-grid-column-small uk-grid-row-small" uk-grid>
+        <div *ngFor="let info of infosTotal" class="uk-card uk-card-default uk-card-body">
+          <div class="uk-card-header uk-padding-remove-horizontal">
+            <div class="uk-grid-small uk-flex-middle" uk-grid>
+              <div class="uk-width-expand">
+                <h1 class="uk-card-title"> {{info.titulo}}</h1>
+                <p class="uk-text-meta uk-margin-remove-top"><time datetime="2016-04-01T19:00"> {{info.data}}</time></p>
+              </div>
+            </div>
+          </div>
+          <div class="uk-card-body">
+            <p>{{info.texto.substr(0, 322)+'...'}} </p>
+          </div>
+          <div class="uk-card-footer">
+            <a class="uk-button uk-button-text"> Leia Mais</a>
+          </div>
+        </div>
+    </div>
+  
+  
+    </div>
+  
+  </section>

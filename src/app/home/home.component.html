@@ -18,51 +18,17 @@
     <h3 class="sub-title"> Informações </h3>
 
     <div class="uk-child-width-expand@s uk-text-center uk-margin-remove-left" uk-grid>
-      <div class="uk-card uk-card-default uk-card-body uk-margin-small-right uk-padding-remove-left">
+      <div *ngFor="let info of infosDestaque" class="uk-card uk-card-default uk-card-body uk-margin-small-right uk-padding-remove-left">
         <div class="uk-card-header uk-padding-remove-horizontal">
           <div class="uk-grid-small uk-flex-middle" uk-grid>
             <div class="uk-width-expand">
-              <h1 class="uk-card-title">Produção de carteirinha do portador de fibromialgia</h1>
-              <p class="uk-text-meta uk-margin-remove-top"><time datetime="2016-04-01T19:00">April 01, 2016</time></p>
+              <h1 class="uk-card-title"> {{info.titulo}}</h1>
+              <p class="uk-text-meta uk-margin-remove-top"><time datetime="2016-04-01T19:00"> {{info.data}}</time></p>
             </div>
           </div>
         </div>
         <div class="uk-card-body">
-          <p>A Secretaria Municipal de Saúde estará recolhendo os documentos necessários para a confecção da carteirinha do portador de fibromialgia a partir desta quinta-feira (9), incluindo Rondonópolis na lista dos municípios brasileiros que reconhecem a necessidade de atendimento </p>
-        </div>
-        <div class="uk-card-footer">
-          <a href="#" class="uk-button uk-button-text"> Leia Mais</a>
-        </div>
-      </div>
-
-      <div class="uk-card uk-card-default uk-card-body uk-margin-small-right uk-padding-remove-left uk-margin-remove-top">
-        <div class="uk-card-header uk-padding-remove-horizontal">
-          <div class="uk-grid-small uk-flex-middle" uk-grid>
-            <div class="uk-width-expand">
-              <h1 class="uk-card-title">Produção de carteirinha do portador de fibromialgia</h1>
-              <p class="uk-text-meta uk-margin-remove-top"><time datetime="2016-04-01T19:00">April 01, 2016</time></p>
-            </div>
-          </div>
-        </div>
-        <div class="uk-card-body">
-          <p>A Secretaria Municipal de Saúde estará recolhendo os documentos necessários para a confecção da carteirinha do portador de fibromialgia a partir desta quinta-feira (9), incluindo Rondonópolis na lista dos municípios brasileiros que reconhecem a necessidade de atendimento </p>
-        </div>
-        <div class="uk-card-footer">
-          <a href="#" class="uk-button uk-button-text"> Leia Mais</a>
-        </div>
-      </div>
-
-      <div class="uk-card uk-card-default uk-card-body uk-margin-small-right uk-padding-remove-left">
-        <div class="uk-card-header uk-padding-remove-horizontal">
-          <div class="uk-grid-small uk-flex-middle" uk-grid>
-            <div class="uk-width-expand">
-              <h1 class="uk-card-title">Produção de carteirinha do portador de fibromialgia</h1>
-              <p class="uk-text-meta uk-margin-remove-top"><time datetime="2016-04-01T19:00">April 01, 2016</time></p>
-            </div>
-          </div>
-        </div>
-        <div class="uk-card-body">
-          <p>A Secretaria Municipal de Saúde estará recolhendo os documentos necessários para a confecção da carteirinha do portador de fibromialgia a partir desta quinta-feira (9), incluindo Rondonópolis na lista dos municípios brasileiros que reconhecem a necessidade de atendimento </p>
+          <p>{{info.texto.substr(0, 322)+'...'}} </p>
         </div>
         <div class="uk-card-footer">
           <a href="#" class="uk-button uk-button-text"> Leia Mais</a>
