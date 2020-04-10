@@ -1,0 +1,23 @@
+    <section class="uk-section uk-padding-remove-top">
+        <h3 class="sub-title"> Relatórios </h3>
+  
+        <div class="uk-text-center uk-margin-small-right uk-margin-small-left" uk-grid>
+            <div *ngFor="let relatorio of relatoriosTotal" class="uk-width-1-2@s">
+                <!-- <div class="uk-card uk-card-default uk-card-body">1-2</div> -->
+                <div class="uk-card uk-card-default uk-card-body">
+                    <div class="uk-card-badge uk-label">{{relatorio.nome}}
+                        <br>
+                        {{relatorio.cidade}}
+                        </div>
+                    <h3 class="uk-card-title">{{relatorio.titulo}}</h3>
+                    <p>{{relatorio.relatorio}}</p>
+                </div>
+            </div>
+        
+        </div>
+
+
+        <div class="uk-margin-large uk-text-center">
+            <button [routerLink]="['/formulario-relato']" class="uk-button uk-button-primary"> Faça um relato</button>
+          </div>
+    </section>

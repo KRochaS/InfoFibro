@@ -1,0 +1,45 @@
+<div class="uk-flex-center" uk-grid>
+    <div class="uk-width-1-3@m">
+      <p class="uk-text-center uk-margin-large-top uk-margin-small-bottom">
+  
+      </p>
+  
+  
+      <div class="uk-card uk-card-primary uk-card-body uk-box-shadow-small">
+        <div class="uk-column-1-3 uk-flex uk-flex-around" ui-grid>
+          <h3 class="uk-card-title"> Faça um relato</h3>
+  
+          <span class="uk-icon" uk-icon="icon: icon-color-dark; ratio: 0.1"></span>
+        </div>
+  
+        <form [formGroup]="form" class="uk-margin">
+          <div class="uk-margin">
+            <input formControlName="nome" readonly type="text" class="uk-input uk-form-large" placeholder="Nome" required>
+  
+          </div>
+          <div class="uk-margin">
+            <input formControlName="titulo" type="text" class="uk-input uk-form-large" placeholder="Título" required>
+  
+          </div>
+          <div class="uk-margin">
+            <input formControlName="cidade" type="text" class="uk-input uk-form-large" placeholder="Cidade" required>
+  
+          </div>
+          <div class="uk-margin">
+            <textarea formControlName="relatorio" textarea class="uk-input uk-form-large" placeholder="Digite seu relatório" required></textarea>
+          </div>
+        </form>
+        <div class="uk-margin uk-text-right">
+          <button href="/" class="uk-button uk-button-default" [disabled]="!form.valid" (click)="submit()"> Enviar</button>
+        </div>
+      </div>
+  
+  
+      <p class="uk-text-center">
+        <a href="/relatos" class="uk-button uk-button-link"> Voltar</a>
+      </p>
+    </div>
+  </div>
+  
+  <ngx-loading [show]="loading"></ngx-loading>
+  

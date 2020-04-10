@@ -8,6 +8,8 @@ import { ResetPasswordComponent } from './account/reset-password/reset-password.
 import { ContaComponent } from './account/conta/conta.component';
 import { ApoieComponent } from './apoie/apoie.component';
 import { InformacoesComponent } from './informacoes/informacoes.component';
+import { RelatosComponent } from './relatos/relatos.component';
+import { FormRelatoComponent } from './relatos/form-relato/form-relato.component';
 
 
 const routes: Routes = [
@@ -21,7 +23,11 @@ const routes: Routes = [
       { path: 'reset-password', component: ResetPasswordComponent },
       { path: 'conta', component: ContaComponent},
       { path: 'apoie', component: ApoieComponent},
-      {path: 'informacoes', component: InformacoesComponent}
+      {path: 'informacoes', component: InformacoesComponent},
+      {path: 'relatos', component: RelatosComponent},
+      {path: 'formulario-relato', component: FormRelatoComponent}
+      
+      
     ]
   },
 

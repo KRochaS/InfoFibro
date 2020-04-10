@@ -1,6 +1,6 @@
 <section class="uk-section uk-padding-remove-top">
     <div class="uk-container uk-padding-remove-top">
-      <h3 class="sub-title"> Informações </h3>
+      <h3 class="sub-title uk-margin-small-top"> Informações </h3>
   
       <div class="uk-grid-column-small uk-grid-row-small" uk-grid>
         <div *ngFor="let info of infosTotal" class="uk-card uk-card-default uk-card-body">
@@ -15,13 +15,42 @@
           <div class="uk-card-body">
             <p>{{info.texto.substr(0, 322)+'...'}} </p>
           </div>
+
+
+          <div id="my-id" class="uk-flex-top" uk-modal>
+            <div class="uk-modal-dialog uk-margin-auto-vertical">
+                <div class="uk-modal-header">
+                    <h4 class="uk-modal-title"> Redirecionando...</h4>
+                </div>
+            
+                <div class="uk-modal-body">
+                    <p>Você será redirecionado para uma página web</p>
+        
+                </div>
+                <div class="uk-modal-footer">
+                    <p class="uk-text-right">
+                        <button class="uk-button uk-button-primary" (click)="redirecionar(info.link)" type="button">Ok</button>
+                        <button class="uk-button uk-button-default uk-modal-close" type="button">Cancelar</button>
+                    </p>
+        
+        
+                </div>
+            </div>
+        </div>
+        
+
           <div class="uk-card-footer">
-            <a class="uk-button uk-button-text"> Leia Mais</a>
+            <a  uk-toggle="target: #my-id" class="uk-button uk-button-text"> Leia Mais</a>
           </div>
         </div>
     </div>
   
   
     </div>
+
   
   </section>
+
+
+
+

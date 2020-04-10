@@ -22,6 +22,8 @@ import {NoopAnimationsModule} from '@angular/platform-browser/animations';
 import { AngularFireDatabaseModule } from '@angular/fire/database';
 import { ApoieComponent } from './apoie/apoie.component';
 import { InformacoesComponent } from './informacoes/informacoes.component';
+import { RelatosComponent } from './relatos/relatos.component';
+import { FormRelatoComponent } from './relatos/form-relato/form-relato.component';
 
 export const environment = {
   firebase: {
@@ -48,7 +50,9 @@ export const environment = {
     FramePageComponent,
     ContaComponent,
     ApoieComponent,
-    InformacoesComponent
+    InformacoesComponent,
+    RelatosComponent,
+    FormRelatoComponent
   ],
   imports: [
     BrowserModule,
@@ -60,7 +64,8 @@ export const environment = {
     AngularFireAuthModule,
     AngularFireDatabaseModule,
     ToasterModule.forRoot(),
-    NoopAnimationsModule
+    NoopAnimationsModule,
+   
   ],
   providers: [AngularFirestore],
   bootstrap: [AppComponent]
