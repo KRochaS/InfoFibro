@@ -33,12 +33,10 @@
   
   
       <p *ngIf="apoiadoresTotal && apoiadoresTotal.length === 1" class="uk-text-center" style="color: #000">
-        <!-- <a href="/login" class="uk-button uk-button-link"> APOIE</a> --> 
        {{apoiadoresTotal ? apoiadoresTotal.length + ' apoiador' : 'Não há apoios no momento'}}
       </p>
 
       <p *ngIf="apoiadoresTotal && apoiadoresTotal.length > 1" class="uk-text-center" style="color: #000">
-        <!-- <a href="/login" class="uk-button uk-button-link"> APOIE</a> --> 
        {{apoiadoresTotal ? apoiadoresTotal.length + ' apoiadores' : 'Não há apoios no momento'}}
       </p>
 

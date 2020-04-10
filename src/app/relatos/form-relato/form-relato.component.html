@@ -30,13 +30,13 @@
           </div>
         </form>
         <div class="uk-margin uk-text-right">
-          <button href="/" class="uk-button uk-button-default" [disabled]="!form.valid" (click)="submit()"> Enviar</button>
+          <button class="uk-button uk-button-default" [disabled]="!form.valid" (click)="submit()"> Enviar</button>
         </div>
       </div>
   
   
       <p class="uk-text-center">
-        <a href="/relatos" class="uk-button uk-button-link"> Voltar</a>
+        <a [routerLink]="['/relatos']" class="uk-button uk-button-link"> Voltar</a>
       </p>
     </div>
   </div>
