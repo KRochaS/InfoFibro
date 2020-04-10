@@ -25,9 +25,9 @@ export class SignupComponent implements OnInit {
         private db: AngularFireDatabase,) {
 
         this.form = this.formBuilder.group({
-            nome: ['Karine Rocha', Validators.required],
-            email: ['karinerocha.s@hotmail.com', Validators.required],
-            senha: ['krsilva1102', Validators.required]
+            nome: ['', Validators.required],
+            email: ['', Validators.required],
+            senha: ['', Validators.required]
         })
     }
     ngOnInit() {

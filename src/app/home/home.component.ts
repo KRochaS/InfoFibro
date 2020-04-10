@@ -56,4 +56,9 @@ export class HomeComponent implements OnInit {
 
 	}
 
+    redirecionar(link) {
+
+        window.open(link, '_blank');
+        
+    }
 }

@@ -30,9 +30,32 @@
         <div class="uk-card-body">
           <p>{{info.texto.substr(0, 322)+'...'}} </p>
         </div>
-        <div class="uk-card-footer">
-          <a href="#" class="uk-button uk-button-text"> Leia Mais</a>
+
+        <div id="my-id" class="uk-flex-top" uk-modal>
+            <div class="uk-modal-dialog uk-margin-auto-vertical">
+                <div class="uk-modal-header">
+                    <h4 class="uk-modal-title"> Redirecionando...</h4>
+                </div>
+            
+                <div class="uk-modal-body">
+                    <p>Você será redirecionado para uma página web</p>
+        
+                </div>
+                <div class="uk-modal-footer">
+                    <p class="uk-text-right">
+                        <button class="uk-button uk-button-primary" (click)="redirecionar(info.link)" type="button">Ok</button>
+                        <button class="uk-button uk-button-default uk-modal-close" type="button">Cancelar</button>
+                    </p>
+        
+        
+                </div>
+            </div>
         </div>
+        
+
+          <div class="uk-card-footer">
+            <a  uk-toggle="target: #my-id" class="uk-button uk-button-text"> Leia Mais</a>
+          </div>
       </div>
   </div>
 

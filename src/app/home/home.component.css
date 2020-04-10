@@ -8,3 +8,15 @@ h3.sub-title {
 .uk-card-body {
     padding-bottom: 61px;
 }
+
+body {
+    color: #000 !important;
+}
+
+.uk-modal-title {
+    color: #000;
+    font-size: 18px;
+}
+.uk-modal-body {
+    color: #000 !important;
+}
