@@ -26,13 +26,13 @@
         </div>
       </form>
       <div class="uk-margin uk-text-right">
-        <button href="/login" class="uk-button uk-button-default" [disabled]="!form.valid" (click)="submit(form.value)"> Cadastrar</button>
+        <button class="uk-button uk-button-default" [disabled]="!form.valid" (click)="submit(form.value)"> Cadastrar</button>
       </div>
     </div>
 
 
     <p class="uk-text-center">
-      <a href="/login" class="uk-button uk-button-link"> Voltar</a>
+      <a [routerLink]="['/login']" class="uk-button uk-button-link"> Voltar</a>
     </p>
   </div>
 </div>
