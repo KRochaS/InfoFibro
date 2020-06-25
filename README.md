@@ -11,3 +11,9 @@ Sendo a síndrome de Fibromialgia pouco conhecida, não há atendimento preferen
 Levar até os portadores de Fibromialgia um espaço pra que possam ter visibilidade, onde serão encontradas informações uteis sobre a doença, e um espaço para quem quiser apoiar o incentivo a carteirinha para portadores.
 #### Benefícios
 A visibilidade para uma doença pouco conhecida, a oportunidade de chegar em mais pessoas o conhecimento sobre a doença e também a chance da carteirinha de portador tomar proporções maiores, atingindo outras cidades e beneficiando muitos portadores.
+
+## :computer: Tecnologias
+
+- [Angular](https://angular.io/)
+- [Firebase](https://firebase.google.com/?hl=pt-br)
+- [UIKit](https://getuikit.com/)
