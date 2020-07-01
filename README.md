@@ -1,6 +1,6 @@
 # InfoFibro
 
-![Info.Fibro](https://i.ibb.co/xFbgPKr/Info-Fibro.png)
+![InfoFibro](https://i.ibb.co/xFbgPKr/Info-Fibro.png)
 
 
 
