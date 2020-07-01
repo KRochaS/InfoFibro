@@ -1,6 +1,6 @@
 # InfoFibro
 
-![InfoFibro](https://i.ibb.co/xFbgPKr/Info-Fibro.png)
+![InfoFibro](https://github.com/KRochaS/InfoFibro/blob/master/Info-Fibro.png?raw=true)
 
 
 
