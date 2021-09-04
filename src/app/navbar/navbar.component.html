@@ -12,12 +12,16 @@
 					<li> <a [routerLink]="['/informacoes']" routerLinkActive="uk-text-bold"> Informações</a></li>
 					<li> <a [routerLink]="['/relatos']" routerLinkActive="uk-text-bold"> Relatos</a></li>
 
+
+               
 				</ul>
 			</div>
-			<div class="uk-flex" uk-grid>
-				<ul class="uk-subnav uk-subnav-pill" uk-margin>
-                    <li>
-                        <a> Conta <span uk-icon="icon:  triangle-down"></span></a>
+
+            <div class="uk-flex users" style="height: 20px;" uk-grid>
+                <ul class="uk-subnav uk-subnav-pill" uk-margin style="height: 20px;">
+                    <li style="height: 20px;">
+                        <!-- <a> Conta <span uk-icon="icon:  triangle-down"></span></a> -->
+                        <i class="fas fa-user"></i>
                         <div uk-dropdown="mode: click;" class="uk-padding-small">
                             <ul class="uk-nav uk-dropdown-nav ">
                                 <li><a (click)="verificaLogin()" style="color:black !important;"> {{user.name}}</a></li>
@@ -26,10 +30,10 @@
                         </div>
                     </li>
                 </ul>
-
             </div>
-			
 		</nav>
+
+        
 	</div>
 </div>
 
