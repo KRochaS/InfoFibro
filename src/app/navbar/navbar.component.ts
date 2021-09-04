@@ -97,16 +97,7 @@ export class NavbarComponent implements OnInit {
     
     }
 
-    logout() {
-        console.log('logout');
-        this.afAuth.auth.signOut().then(() => {
-            this.user.name = 'Login'
-            this.toasterService.pop('success', 'Logout efetuado!');
-            this.router.navigateByUrl('/');
-        }).catch((err)=> {
-            this.toasterService.pop('error', 'Erro ao fazer logout. Tente novamente');
-        });
-    }
+   
 }
 
 
