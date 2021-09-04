@@ -45,6 +45,7 @@ export class SignupComponent implements OnInit {
                 this.insertUserData();
             }).catch((err) => {
                 this.toasterService.pop('error', 'Erro ao criar Cadastro! Tente novamente');
+                this.loading = false;
             })
 
     }
