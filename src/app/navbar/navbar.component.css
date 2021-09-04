@@ -1,3 +1,13 @@
 .uk-icon{
     padding-top: 10px !important;
 }
+
+.users {
+    width: 15%;
+    height: 20px;
+    margin-top: 28px;
+}
+
+.fa-user {
+   color: #fff !important;     
+}
