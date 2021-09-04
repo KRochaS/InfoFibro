@@ -6,6 +6,7 @@
     width: 15%;
     height: 20px;
     margin-top: 28px;
+    cursor: pointer;
 }
 
 .fa-user {
