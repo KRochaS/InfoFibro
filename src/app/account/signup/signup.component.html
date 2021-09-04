@@ -13,17 +13,45 @@
       </div>
 
       <form [formGroup]="form" class="uk-margin">
-        <div class="uk-margin">
-          <input formControlName="nome" type="text" class="uk-input uk-form-large" placeholder="Nome" required>
+        <div [ngClass]="{'uk-margin-small': form.controls.nome.invalid, 'uk-margin':  form.controls.nome.valid}">
+            <input formControlName="nome" type="text" class="uk-input uk-form-large" placeholder="Nome" required
+            [ngClass]="{'form-danger': (!form.controls.nome.valid && !form.controls.nome.pristine || !form.controls.nome.valid)}">
+  
+          </div>
+  
+          <div class="uk-form-danger">
+  
+              {{!form.controls.nome.valid && form.controls.nome.pristine ? '*Campo Obrigatório': ''}}
+    
+                {{form.controls.nome.value.length > 20 && !form.controls.nome.pristine ? '*Máximo 20 caracteres': ''}}
+  
+                {{form.controls.nome.value.length < 5 && !form.controls.nome.pristine ? '*Mínimo 5 caracteres': ''}}
+  
+          </div>
+        <div [ngClass]="{'uk-margin-small': form.controls.email.invalid, 'uk-margin':  form.controls.email.valid}">
+            <input formControlName="email" type="email" class="uk-input uk-form-large" placeholder="E-mail"
+            [ngClass]="{'form-danger': (!form.controls.email.valid && !form.controls.email.pristine || !form.controls.email.valid)}">
+  
+          </div>
+          <div class="uk-form-danger">
+              {{!form.controls.email.valid && !form.controls.email.pristine ? 'E-mail inválido': ''}}
+  
+              {{!form.controls.email.valid && form.controls.email.pristine ? '*Campo Obrigatório': ''}}
+  
+  
+          </div>
+          <div class="uk-margin-small">
+            <input formControlName="senha"  type="password" class="uk-input uk-form-large" placeholder="Senha"
+            [ngClass]="{'form-danger': (!form.controls.senha.valid && !form.controls.senha.pristine || !form.controls.senha.valid)}">
+          </div>
+          <div class="uk-form-danger">
+              {{!form.controls.senha.valid && form.controls.senha.pristine ? '*Campo Obrigatório': ''}}
+  
+              {{form.controls.senha.value.length > 20 && !form.controls.senha.pristine ? '*Máximo 20 caracteres': ''}}
 
-        </div>
-        <div class="uk-margin">
-          <input formControlName="email" type="email" class="uk-input uk-form-large" placeholder="E-mail" required>
-
-        </div>
-        <div class="uk-margin">
-          <input formControlName="senha" type="password" class="uk-input uk-form-large" placeholder="Senha" required>
-        </div>
+              {{form.controls.senha.value.length < 6 && !form.controls.senha.pristine ? '*Mínimo 6 caracteres': ''}}
+  
+          </div>
       </form>
       <div class="uk-margin uk-text-right">
         <button class="uk-button uk-button-default" [disabled]="!form.valid" (click)="submit(form.value)"> Cadastrar</button>
